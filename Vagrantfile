@@ -10,11 +10,11 @@ Vagrant::Config.run do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://yum.mnxsolutions.com/vagrant/centos_56_32.box"
 
-config.vm.customize do |vm|
-  vm.memory_size = 1024
-end
+  config.vm.customize do |vm|
+    vm.memory_size = 1024
+  end
   # Boot with a GUI so you can see the screen. (Default is headless)
-   config.vm.boot_mode = :gui
+  config.vm.boot_mode = :gui
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.
@@ -26,7 +26,6 @@ end
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
   #config.vm.forward_port 27030, 27030
-  #config.vm.forward_port 27031, 27031
 
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
@@ -43,15 +42,5 @@ end
 
     chef.node_name="vagrant_oracle"
 
-    #chef.json ={
-    #
-    #    "wordpress" => {
-    #        "db" => {
-    #            "database" => "wordpress",
-    #            "user" => "wordpress",
-    #            "password" => "wordpress"
-    #        }
-    #    }
-    #}
   end
 end
