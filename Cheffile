@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+
+cookbook 'oracle',
+   :git => 'https://github.com/atomic-penguin/cookbook-oracle.git'
+
+cookbook "oraclexe",
+   :git => "https://github.com/impaq-cloud/oracle-xe.git"

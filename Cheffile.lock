@@ -1,0 +1,30 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    el-sysctl (0.0.6)
+    gnome (0.0.3)
+      x-windows (>= 0.0.0)
+    x-windows (0.0.3)
+
+GIT
+  remote: https://github.com/atomic-penguin/cookbook-oracle.git
+  ref: master
+  sha: 24571868cff3ff49bf5422649ed2134d1c5b5782
+  specs:
+    oracle (0.0.9)
+      el-sysctl (>= 0.0.0)
+      gnome (>= 0.0.0)
+      x-windows (>= 0.0.0)
+
+GIT
+  remote: https://github.com/impaq-cloud/oracle-xe.git
+  ref: master
+  sha: 3d0859f20d609a46483c61432f7481e3a98c945c
+  specs:
+    oraclexe (0.0.1)
+      oracle (>= 0.0.0)
+
+DEPENDENCIES
+  oracle (>= 0)
+  oraclexe (>= 0)
+
